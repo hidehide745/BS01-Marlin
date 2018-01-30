@@ -595,9 +595,10 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 //#define HOMING_FEEDRATE {50*60, 50*60, 15*60, 0}  // set the homing speeds (mm/min)　台形ネジ
 
 //　各軸のステップ数設定
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/1*16),173.6236}              // BS01 標準リード(M6xP1)
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/1*16),173.6236}              // BS01 標準リード(M6xP1)
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/8*16),173.6236}              // BS01 台形ネジリード8mm
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/1*16),(200/(6.4*3.14)*16)}   // BS01 標準リード、MK8GEAR
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/1*16),(200/(7*3.14159265358979)*16)}   // BS01 標準リード、MK8GEAR AliExpress
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/8*16),(200/(6.4*3.14)*16)}  // BS01 台形ネジ、MK8GEAR
 
 //最大送り速度
