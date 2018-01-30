@@ -601,17 +601,23 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {(200.0/(15*3)*16),(200.0/(15*3)*16),(200.0/8*16),(200/(6.4*3.14)*16)}  // BS01 台形ネジ、MK8GEAR
 
 //最大送り速度
-#define DEFAULT_MAX_FEEDRATE          {900, 900, 7.5, 200}    // (mm/sec)　標準リード
+#define DEFAULT_MAX_FEEDRATE          {120, 120, 3.5, 200}    // (mm/sec)　 SilentStepStick
+//#define DEFAULT_MAX_FEEDRATE          {900, 900, 7.5, 200}    // (mm/sec)　標準リード
 //#define DEFAULT_MAX_FEEDRATE          {300, 300, 150, 50}    // (mm/sec) 台形ネジ
-#define DEFAULT_MAX_ACCELERATION      {3000,3000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
+#define DEFAULT_MAX_ACCELERATION      {1000,1000,30,10000}    // SilentStepStick
+//#define DEFAULT_MAX_ACCELERATION      {3000,3000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
-#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
+#define DEFAULT_ACCELERATION          1000    // SilentStepStick
+//#define DEFAULT_ACCELERATION          3000    // X, Y, Z and E acceleration in mm/s^2 for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  3000   // E acceleration in mm/s^2 for retracts
-#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
+#define DEFAULT_TRAVEL_ACCELERATION   1000    // SilentStepStick
+//#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                10.0    // (mm/sec)
-#define DEFAULT_ZJERK                 0.4     // (mm/sec)
+#define DEFAULT_XYJERK                5.0    // (mm/sec)  SilentStepStick
+//#define DEFAULT_XYJERK                10.0    // (mm/sec)
+#define DEFAULT_ZJERK                 0.2     // (mm/sec)  SilentStepStick
+//#define DEFAULT_ZJERK                 0.4     // (mm/sec)
 #define DEFAULT_EJERK                 5.0    // (mm/sec)
 
 
@@ -650,12 +656,12 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 // @section temperature
 
 // Preheat Constants
-#define PLA_PREHEAT_HOTEND_TEMP 160
-#define PLA_PREHEAT_HPB_TEMP 50
+#define PLA_PREHEAT_HOTEND_TEMP 170
+#define PLA_PREHEAT_HPB_TEMP 35
 #define PLA_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
 
 #define ABS_PREHEAT_HOTEND_TEMP 220
-#define ABS_PREHEAT_HPB_TEMP 70
+#define ABS_PREHEAT_HPB_TEMP 90
 #define ABS_PREHEAT_FAN_SPEED 0   // Insert Value between 0 and 255
 
 //==============================LCD and SD support=============================
