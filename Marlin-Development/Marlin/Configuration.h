@@ -218,9 +218,9 @@ Here are some standard links for getting your machine calibrated:
 
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 // BS01
-    #define  DEFAULT_Kp 12.70
-    #define  DEFAULT_Ki  0.62
-    #define  DEFAULT_Kd 64.49
+    #define  DEFAULT_Kp 31.37
+    #define  DEFAULT_Ki  3.22
+    #define  DEFAULT_Kd 76.32
 
 // MakerGear
 //    #define  DEFAULT_Kp 7.0
@@ -616,7 +616,7 @@ const bool Z_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the logic 
 //#define DEFAULT_TRAVEL_ACCELERATION   3000    // X, Y, Z acceleration in mm/s^2 for travel (non printing) moves
 
 // The speed change that does not require acceleration (i.e. the software might assume it can be done instantaneously)
-#define DEFAULT_XYJERK                5.0    // (mm/sec)  SilentStepStick
+#define DEFAULT_XYJERK                1.0    // (mm/sec)  SilentStepStick
 //#define DEFAULT_XYJERK                10.0    // (mm/sec)
 #define DEFAULT_ZJERK                 0.2     // (mm/sec)  SilentStepStick
 //#define DEFAULT_ZJERK                 0.4     // (mm/sec)
